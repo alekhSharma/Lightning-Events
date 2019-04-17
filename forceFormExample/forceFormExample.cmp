@@ -1,0 +1,6 @@
+<!-- Add this component to an account record Lightning page -->
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+ 
+        <lightning:recordForm  recordId="{!v.recordId}" objectApiName="Account" fields="Name, Industry" />
+   
+</aura:component>

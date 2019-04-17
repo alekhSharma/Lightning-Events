@@ -1,0 +1,32 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="SystemEventExampleClass">
+	
+    <aura:handler event="aura:waiting"     action="{! c.showSpinner }"/>
+    <aura:handler event="aura:doneWaiting" action="{! c.hideSpinner }"/>
+    
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <aura:attribute name="ListOfAccount" type="account[]" />
+    
+    <lightning:card title="System Event Example">
+        <lightning:button onclick="{! c.callData}" label="show Data"/>
+        
+         <!--loading spinner start... style=Brand Medium (blue dots)-->
+         <aura:if isTrue="{!v.Spinner}">
+            <div aura:id="spinnerId" class="slds-spinner_container">
+               <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                 <span class="slds-assistive-text">Loading</span>
+                 <div class="slds-spinner__dot-a"></div>
+                 <div class="slds-spinner__dot-b"></div>
+               </div>
+            </div>
+         </aura:if>
+         <!-- Loading spinner end--> 
+        
+        <h3>Account List</h3>
+        <aura:iteration items="{!v.ListOfAccount}" var="acc">
+            <ul class="slds-list--dotted">
+                <li>{!acc.Name}</li>
+            </ul>
+        </aura:iteration>
+    </lightning:card>
+    
+</aura:component>

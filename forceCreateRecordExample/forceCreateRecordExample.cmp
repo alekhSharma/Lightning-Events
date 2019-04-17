@@ -1,0 +1,14 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <lightning:card title="Salesforce1 Event">
+        <div class="slds-p-around_large">
+             <h1> Display Toast</h1>
+            <lightning:button label="Information" onclick="{! c.displayInfoToast}" variant="brand"/> 
+            <lightning:button label="Success" onclick="{! c.displaySuccessToast}" variant="brand"/> 
+            <lightning:button label="Error" onclick="{! c.displayErrorToast}" variant="destructive"/> 
+        </div>
+        <div class="slds-p-around_large">
+             <h1> force:createRecord</h1>
+            <lightning:button label="Add Account" onclick="{! c.createRecord}"/> 
+        </div>
+    </lightning:card>  
+</aura:component>

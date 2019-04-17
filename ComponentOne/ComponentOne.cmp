@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:registerEvent name="appEvent" type="c:ApplicationEvent" />
+    
+    <lightning:card title="Component One">
+    	
+        <lightning:button label="Click Me" onclick="{! c.handleClick }" />
+    
+    </lightning:card>
+            
+</aura:component>

@@ -1,0 +1,14 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >	
+    <aura:attribute name="textVariable" type="String" />
+    
+    <aura:handler name="compEvent" event="c:ComponentEvent" action="{! c.handleComponentEvent}" />
+    
+    <lightning:card title="Parent Component">
+       
+        {! v.textVariable}
+        
+    	<c:HierarchyOne childvar="Data passed" />
+        
+    </lightning:card>
+    
+</aura:component>

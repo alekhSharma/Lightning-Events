@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:handler event="c:ApplicationEvent" action="{! c.handleApplicationEvent}" />
+    
+    <aura:attribute name="textVariable" type="String" />
+    
+    <lightning:card title="Component Two">
+    		{! v.textVariable}
+    </lightning:card>
+</aura:component>

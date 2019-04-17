@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+  
+    <!-- To register the event -->
+    <c:ComponentOne />
+    
+    <!-- To handle the event -->
+    <c:ComponentTwo />
+
+</aura:component>
